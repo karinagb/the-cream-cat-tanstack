@@ -10,18 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as MenuRouteImport } from './routes/menu'
-import { Route as HomeRouteImport } from './routes/home'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CartRouteImport } from './routes/cart'
+import { Route as IndexRouteImport } from './routes/index'
 
 const MenuRoute = MenuRouteImport.update({
   id: '/menu',
   path: '/menu',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HomeRoute = HomeRouteImport.update({
-  id: '/home',
-  path: '/home',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -34,38 +29,43 @@ const CartRoute = CartRouteImport.update({
   path: '/cart',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
-  '/home': typeof HomeRoute
   '/menu': typeof MenuRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
-  '/home': typeof HomeRoute
   '/menu': typeof MenuRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
-  '/home': typeof HomeRoute
   '/menu': typeof MenuRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/cart' | '/contact' | '/home' | '/menu'
+  fullPaths: '/' | '/cart' | '/contact' | '/menu'
   fileRoutesByTo: FileRoutesByTo
-  to: '/cart' | '/contact' | '/home' | '/menu'
-  id: '__root__' | '/cart' | '/contact' | '/home' | '/menu'
+  to: '/' | '/cart' | '/contact' | '/menu'
+  id: '__root__' | '/' | '/cart' | '/contact' | '/menu'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   CartRoute: typeof CartRoute
   ContactRoute: typeof ContactRoute
-  HomeRoute: typeof HomeRoute
   MenuRoute: typeof MenuRoute
 }
 
@@ -76,13 +76,6 @@ declare module '@tanstack/react-router' {
       path: '/menu'
       fullPath: '/menu'
       preLoaderRoute: typeof MenuRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/home': {
-      id: '/home'
-      path: '/home'
-      fullPath: '/home'
-      preLoaderRoute: typeof HomeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -99,13 +92,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CartRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   CartRoute: CartRoute,
   ContactRoute: ContactRoute,
-  HomeRoute: HomeRoute,
   MenuRoute: MenuRoute,
 }
 export const routeTree = rootRouteImport

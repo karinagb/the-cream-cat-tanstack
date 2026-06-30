@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Vanilla Dream Cone",
+    "description": "Classic vanilla ice cream.",
+    "price": 4.50,
+    "category": "human",
+    "image": "vanilla-dream-cone.png"
+  },
+  {
+    "id": 2,
+    "name": "Chocolate Heaven Cone",
+    "description": "Rich chocolate ice cream.",
+    "price": 5.00,
+    "category": "human",
+    "image": "chocolate-heaven-cone.png"
+  },
+  {
+    "id": 3,
+    "name": "Strawberry Bliss Cone",
+    "description": "Fresh strawberry ice cream.",
+    "price": 5.25,
+    "category": "human",
+    "image": "strawberry-bliss-cone.png"
+  },
+  {
+    "id": 4,
+    "name": "Mint Chocolate Chip Cone",
+    "description": "Mint ice cream with chocolate chips.",
+    "price": 5.75,
+    "category": "human",
+    "image": "mint-chocolate-chip-cone.png"
+  },
+  {
+    "id": 5,
+    "name": "Salted Caramel Banana Split",
+    "description": "Banana split with salted caramel.",
+    "price": 8.50,
+    "category": "human",
+    "image": "salted-caramel-banana-split.png"
+  },
+  {
+    "id": 6,
+    "name": "Cookies & Cream Milkshake",
+    "description": "Creamy cookies & cream shake.",
+    "price": 6.75,
+    "category": "human",
+    "image": "cookies-and-cream-milkshake.png"
+  },
+  {
+    "id": 7,
+    "name": "Mango Sorbet Cup",
+    "description": "Refreshing mango sorbet.",
+    "price": 5.50,
+    "category": "human",
+    "image": "mango-sorbet-cup.png"
+  },
+  {
+    "id": 8,
+    "name": "Pistachio Sundae",
+    "description": "Creamy pistachio with toppings.",
+    "price": 6.50,
+    "category": "human",
+    "image": "pistachio-sundae.png"
+  },
+  {
+    "id": 9,
+    "name": "Peanut Butter Pup Cone",
+    "description": "Dog-friendly frozen treat.",
+    "price": 3.50,
+    "category": "pet",
+    "image": "peanut-butter-pup-cone.png"
+  },
+  {
+    "id": 10,
+    "name": "Tuna Kitty Ice Pop",
+    "description": "Cat-friendly frozen tuna treat.",
+    "price": 3.50,
+    "category": "pet",
+    "image": "tuna-kitty-ice-pop.png"
+  }
+]

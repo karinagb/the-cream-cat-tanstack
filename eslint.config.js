@@ -18,11 +18,5 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
-  {
-    rules: {
-      'react/no-unescaped-entities': 'off',
-      'react/prop-types': 'off',
-    },
-  },
   prettier,
 ]);

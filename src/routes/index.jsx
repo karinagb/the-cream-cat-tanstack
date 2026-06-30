@@ -3,15 +3,17 @@ import Hero from '../components/Hero';
 import TodaysIceCream from '../components/TodaysIceCream';
 import Promotions from '../components/Promotions';
 
-export const Route = createFileRoute('/home')({
+export const Route = createFileRoute('/')({
   component: Home,
 });
 
 function Home() {
+
+  
   return (
     <div className='home'>
       <Hero />
-      <TodaysIceCream/>
+      <TodaysIceCream />
       <Promotions/>
     </div>
   );
