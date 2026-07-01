@@ -154,130 +154,157 @@ body {
   transform: rotate(-5deg) scale(1.05);
 }
 
-/* =========================
-   MAIN WRAPPER
-========================= */
+/* ===================================================
+   ICE CREAM OF THE DAY
+=================================================== */
+
 .todays-ice-cream {
-  max-width: 800px;
+  max-width: 900px;
 
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
-
-
+  margin: 3rem auto;
+  padding: 2rem;
 
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 
-  gap: 1rem;
+  background: #fff7ef;
+
+  border: 3px dashed #f29c38;
+  border-radius: 28px;
+
+  box-shadow: 0 12px 25px rgba(242, 156, 56, 0.15);
 }
 
 .todays-ice-cream h1 {
-  font-size: 2rem;
-  color: #3d2b1f;
   margin: 0;
+
+  color: #3d2b1f;
+  font-size: 2rem;
 }
 
-/* =========================
-   IMAGE + INFO ROW
-========================= */
 .todays-content {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* IMAGE */
 .todays-ice-cream-img {
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 220px;
 
   object-fit: contain;
 
-  transition: transform 0.3s ease;
+  transition: 0.3s;
 }
 
 .todays-content:hover .todays-ice-cream-img {
-  transform: rotate(-4deg) scale(1.05);
+  transform: rotate(-6deg) scale(1.08);
 }
 
-/* INFO COLUMN */
 .todays-info {
+  flex: 1;
+
   display: flex;
   flex-direction: column;
-
-  gap: 0.3rem;
-
-  flex: 1;
+  gap: 0.6rem;
 }
 
-/* TEXT */
 .todays-info h3 {
   margin: 0;
-  font-size: 1.3rem;
+
+  font-size: 2rem;
   color: #3d2b1f;
 }
 
 .todays-info h4 {
   margin: 0;
-  font-size: 0.9rem;
+
+  color: #6b5444;
   font-weight: 400;
-  color: rgba(61, 43, 31, 0.7);
+  line-height: 1.5;
 }
 
-/* =========================
-   BUY ROW
-========================= */
 .buy {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .price {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #f29c38;
   margin: 0;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: #f29c38;
 }
 
-/* CART BUTTON */
-.cart-button {
-  background: none;
-  border: none;
-
-  cursor: pointer;
+/* ===================================================
+   PROMOTION
+=================================================== */
+.promo-content {
+  width: 100%;
+  max-width: 700px;
 
   display: flex;
+  flex-direction: row;
+
+  margin: 3rem auto;
+  padding: 2rem;
+
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #fff8ef, #ffe8c8);
+
+  border-radius: 30px;
+}
+
+.promo-content h1 {
+  margin: 0;
+  color: #3d2b1f;
+}
+
+.promo-info {
+  position: relative;
+  max-width: 100%;
+}
+
+.promo-info h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.promo-buy {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-
-  width: 34px;
-  height: 34px;
-
-  border-radius: 8px;
-
-  transition: background 0.2s ease, transform 0.2s ease;
+  justify-content: start;
 }
 
-.cart-button:hover {
-  background: rgba(242, 156, 56, 0.12);
-  transform: scale(1.05);
+.promo-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f29c38;
+  margin-right: 1rem;
 }
 
-.cart-icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
+/* Decorative background image */
+.promo-ice-cream-img {
+  position: absolute;
+
+  right: -40px;
+  bottom: -20px;
+
+  width: 320px;
+
+  transform: rotate(-15deg);
+
+  pointer-events: none;
 }
-
-
-
-
-
-
-
 
 /* =========================
    MENU PAGE
@@ -389,7 +416,7 @@ body {
   height: 200px;
 
   object-fit: contain;
-
+  border-radius: 16px;
   margin-bottom: 0.8rem;
 }
 
@@ -418,6 +445,7 @@ body {
   width: 100%;
 
   margin-top: 1rem;
+  padding-top: 1rem;
 
   border-top: 1px solid rgba(61, 43, 31, 0.08);
 }
@@ -468,4 +496,145 @@ body {
 
   object-fit: contain;
   display: block;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact {
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3rem 1.5rem;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+
+  font-size: 2.5rem;
+  color: #3d2b1f;
+}
+
+.contact h3 {
+  color: #f29c38;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact form {
+  width: 100%;
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem;
+
+  background: #fffaf5;
+
+  border: 2px solid rgba(242, 156, 56, 0.25);
+  border-radius: 24px;
+
+  box-shadow: 0 12px 24px rgba(242, 156, 56, 0.12);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+
+  color: #3d2b1f;
+
+  background: white;
+
+  border: 2px solid #f3d8b2;
+  border-radius: 14px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.contact textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #f29c38;
+  box-shadow: 0 0 0 4px rgba(242, 156, 56, 0.15);
+}
+
+/* =========================
+   PLACEHOLDERS
+========================= */
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #b08a67;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact button {
+  align-self: flex-end;
+
+  padding: 0.8rem 1.6rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: white;
+
+  background: #f29c38;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-2px);
+
+  background: #e98d1e;
+}
+
+.contact button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.contact h3 {
+  padding: 1rem 2rem;
+
+  background: #fff7e6;
+
+  border: 2px dashed #f29c38;
+  border-radius: 16px;
+
+  color: #3d2b1f;
 }
