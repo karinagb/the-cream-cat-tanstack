@@ -18,7 +18,7 @@ export default function Promotions(props) {
 
       </div>
 
-      {/* <img className='promo-ice-cream-img' src={props.image} alt={props.name} /> */}
+      <img className='promo-ice-cream-img' src={props.image} alt={props.name} />
     </div>
   );
 }

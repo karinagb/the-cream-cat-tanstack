@@ -49,7 +49,7 @@ function Menu() {
             .map((iceCream) => (
               <IceCream
                 key={iceCream.id}
-                img={iceCream.image}
+               image={`/assets/ice-creams/${iceCream.image}`}
                 name={iceCream.name}
                 description={iceCream.description}
                 price={iceCream.price}

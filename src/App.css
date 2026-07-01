@@ -499,33 +499,97 @@ body {
 }
 
 /* =========================
-   CONTACT PAGE
+   CONTACT PAGE WRAPPER
 ========================= */
 
 .contact {
-  min-height: 80vh;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  padding: 3rem 1.5rem;
-}
+  padding: 2.5rem 1.5rem;
+  gap: 2.5rem;
 
-.contact h2 {
-  margin-bottom: 2rem;
-
-  font-size: 2.5rem;
+  background: #fdf7ef;
   color: #3d2b1f;
 }
 
-.contact h3 {
-  color: #f29c38;
+/* =========================
+   SHOP LOCATION SECTION
+========================= */
+
+.location {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem;
+
+  background: linear-gradient(135deg, #fff7ed, #ffe6c7);
+
+  border-radius: 28px;
+  border: 2px solid rgba(242, 156, 56, 0.25);
+
+  box-shadow: 0 15px 30px rgba(242, 156, 56, 0.15);
+
+  text-align: center;
+}
+
+.location h2 {
+  margin: 0;
+
+  font-size: 2rem;
+  color: #3d2b1f;
+}
+
+.location p {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  color: #6b5444;
 }
 
 /* =========================
-   FORM
+   SHOP IMAGE
+========================= */
+
+.shop {
+  width: 100%;
+  max-width: 650px;
+
+  border-radius: 20px;
+
+  object-fit: cover;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop:hover {
+  transform: scale(1.02) rotate(-0.5deg);
+  box-shadow: 0 15px 35px rgba(242, 156, 56, 0.2);
+}
+
+/* =========================
+   CONTACT TITLE
+========================= */
+
+.contact h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* =========================
+   FORM CONTAINER
 ========================= */
 
 .contact form {
@@ -540,10 +604,10 @@ body {
 
   background: #fffaf5;
 
-  border: 2px solid rgba(242, 156, 56, 0.25);
   border-radius: 24px;
+  border: 2px solid rgba(242, 156, 56, 0.25);
 
-  box-shadow: 0 12px 24px rgba(242, 156, 56, 0.12);
+  box-shadow: 0 12px 25px rgba(242, 156, 56, 0.12);
 }
 
 /* =========================
@@ -553,25 +617,27 @@ body {
 .contact input,
 .contact textarea {
   width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
+
+  padding: 0.9rem 1rem;
+
+  border-radius: 14px;
+
+  border: 2px solid #f3d8b2;
+
   font-size: 1rem;
   font-family: inherit;
 
   color: #3d2b1f;
 
-  background: white;
-
-  border: 2px solid #f3d8b2;
-  border-radius: 14px;
-
   outline: none;
 
   transition: 0.2s ease;
+
+  box-sizing: border-box;
 }
 
 .contact textarea {
-  min-height: 170px;
+  min-height: 150px;
   resize: vertical;
 }
 
@@ -582,32 +648,20 @@ body {
 }
 
 /* =========================
-   PLACEHOLDERS
-========================= */
-
-.contact input::placeholder,
-.contact textarea::placeholder {
-  color: #b08a67;
-}
-
-/* =========================
    BUTTON
 ========================= */
 
 .contact button {
-  align-self: flex-end;
-
-  padding: 0.8rem 1.6rem;
-
-  font-size: 1rem;
-  font-weight: 700;
-
-  color: white;
-
-  background: #f29c38;
+  padding: 0.9rem 1.4rem;
 
   border: none;
   border-radius: 999px;
+
+  background: #f29c38;
+  color: white;
+
+  font-weight: 700;
+  font-size: 1rem;
 
   cursor: pointer;
 
@@ -616,8 +670,7 @@ body {
 
 .contact button:hover {
   transform: translateY(-2px);
-
-  background: #e98d1e;
+  background: #e88c1f;
 }
 
 .contact button:active {
@@ -625,16 +678,9 @@ body {
 }
 
 /* =========================
-   SUCCESS MESSAGE
+   ERROR STATE
 ========================= */
 
-.contact h3 {
-  padding: 1rem 2rem;
-
-  background: #fff7e6;
-
-  border: 2px dashed #f29c38;
-  border-radius: 16px;
-
-  color: #3d2b1f;
+.contact h1 {
+  color: #d9534f;
 }

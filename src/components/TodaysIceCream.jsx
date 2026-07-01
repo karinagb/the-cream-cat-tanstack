@@ -6,11 +6,11 @@ export default function TodaysIceCream(props) {
       <h1>Ice Cream of the Day!</h1>
 
       <div className='todays-content'>
-        {/* <img
+        <img
           className='todays-ice-cream-img'
           src={props.image}
           alt={props.name}
-        /> */}
+        />
 
         <div className='todays-info'>
           <h3>{props.name}</h3>
