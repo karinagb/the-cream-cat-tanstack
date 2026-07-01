@@ -99,6 +99,38 @@ body {
   margin-right: 0;
 }
 
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* NAV LINKS */
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  /* group links if they are not already wrapped */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .cart {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 /* HOME  */
 .home {
   display: flex;
@@ -185,6 +217,7 @@ body {
 
 .todays-content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2rem;
 }
@@ -304,6 +337,88 @@ body {
   transform: rotate(-15deg);
 
   pointer-events: none;
+}
+
+/* =========================
+   MOBILE (<= 600px)
+========================= */
+
+@media (max-width: 600px) {
+  /* HERO */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .hero .logo {
+    width: 200px;
+  }
+
+  /* TODAY'S ICE CREAM */
+  .todays-ice-cream {
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 20px;
+    align-items: center;
+  }
+
+  .todays-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .todays-ice-cream h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .todays-ice-cream-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .todays-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  /* PROMO */
+  .promo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 20px;
+    position: relative;
+  }
+  .promo-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .promo-buy {
+    justify-content: center;
+  }
+
+  .promo-price {
+    font-size: 2rem;
+  }
+
+  .promo-ice-cream-img {
+    position: static;
+    width: 200px;
+    margin-top: 1rem;
+    transform: rotate(-10deg);
+    opacity: 0.9;
+  }
 }
 
 /* =========================
@@ -571,7 +686,9 @@ body {
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .shop:hover {
