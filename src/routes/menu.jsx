@@ -11,8 +11,10 @@ export const Route = createFileRoute('/menu')({
 function Menu() {
   const [iceCreams, setIceCreams] = useState([]);
 
+  const base = import.meta.env.BASE_URL;
+
   async function fetchIceCreams() {
-    const response = await fetch('/api/iceCreams.json');
+    const response = await fetch(`${base}api/iceCreams.json`);
     const data = await response.json();
 
     setIceCreams(data);
@@ -63,7 +65,7 @@ function Menu() {
                 name={iceCream.name}
                 description={iceCream.description}
                 price={iceCream.price}
-                 addToCart={addToCart}
+                addToCart={addToCart}
                 iceCream={iceCream}
               />
             ))}
