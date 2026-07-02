@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Vanilla Dream Cone",
+    "description": "Smooth and creamy vanilla ice cream made with real vanilla extract, served in a waffle cone.",
+    "price": 4.5,
+    "category": "human",
+    "image": "vanilla-dream-cone.png"
+  },
+  {
+    "id": 2,
+    "name": "Chocolate Heaven Cone",
+    "description": "Rich chocolate ice cream with a deep cocoa flavor, made for true chocolate lovers.",
+    "price": 5.0,
+    "category": "human",
+    "image": "chocolate-heaven-cone.png"
+  },
+  {
+    "id": 3,
+    "name": "Strawberry Bliss Cone",
+    "description": "Creamy strawberry ice cream in a crispy golden cone, refreshing taste.",
+    "price": 5.25,
+    "category": "human",
+    "image": "strawberry-bliss-cone.png"
+  },
+  {
+    "id": 4,
+    "name": "Mint Chocolate Chip Cone",
+    "description": "Fresh mint ice cream mixed with crunchy chocolate chips for a cool, sweet balance.",
+    "price": 5.75,
+    "category": "human",
+    "image": "mint-chocolate-chip-cone.png"
+  },
+  {
+    "id": 5,
+    "name": "Salted Caramel Banana Split",
+    "description": "Classic banana split topped with  whipped cream, a warm caramel drizzle and a little sweet cherry.",
+    "price": 8.5,
+    "category": "human",
+    "image": "salted-caramel-banana-split.png"
+  },
+  {
+    "id": 6,
+    "name": "Cookies & Cream Milkshake",
+    "description": "Thick milkshake blended with vanilla ice cream and crushed chocolate cookies.",
+    "price": 6.75,
+    "category": "human",
+    "image": "cookies-and-cream-milkshake.png"
+  },
+  {
+    "id": 7,
+    "name": "Mango Sorbet Cup",
+    "description": "Light and refreshing mango sorbet made with ripe tropical mangoes.",
+    "price": 5.5,
+    "category": "human",
+    "image": "mango-sorbet-cup.png"
+  },
+  {
+    "id": 8,
+    "name": "Pistachio Sundae",
+    "description": "Creamy pistachio ice cream topped with whipped cream, roasted nuts and a soft caramel topping.",
+    "price": 6.5,
+    "category": "human",
+    "image": "pistachio-sundae.png"
+  },
+  {
+    "id": 9,
+    "name": "Peanut Butter Pup Cone",
+    "description": "Dog-friendly frozen peanut butter treat made with safe, simple ingredients.",
+    "price": 3.5,
+    "category": "pet",
+    "image": "peanut-butter-pup-cone.png"
+  },
+  {
+    "id": 10,
+    "name": "Tuna Kitty Ice Pop",
+    "description": "Cat-friendly frozen tuna snack designed as a cool and tasty pet treat.",
+    "price": 3.5,
+    "category": "pet",
+    "image": "tuna-kitty-ice-pop.png"
+  }
+]
