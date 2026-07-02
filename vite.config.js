@@ -7,7 +7,5 @@ export default defineConfig(({ command }) => ({
     react(),
     tanstackRouter(),
   ],
-  base: command === 'build'
-    ? '/the-cream-cat/'
-    : '/',
+  base: '/the-cream-cat/',
 }))
