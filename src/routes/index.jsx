@@ -14,10 +14,9 @@ function Home() {
   const [iceCreams, setIceCreams] = useState([]);
   const [cart, setCart] = useContext(CartContext);
 
-  const base = import.meta.env.BASE_URL;
 
   async function fetchIceCreams() {
-    const response = await fetch(`${base}api/iceCreams.json`);
+    const response = await fetch('/api/iceCreams.json');
     const data = await response.json();
 
     setIceCreams(data);
@@ -26,7 +25,7 @@ function Home() {
   useEffect(() => {
     fetchIceCreams();
   }, []);
-
+  
   function addToCart(iceCream) {
     setCart([...cart, iceCream]);
   }
