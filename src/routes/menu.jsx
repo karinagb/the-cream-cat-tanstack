@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { createFileRoute } from '@tanstack/react-router';
 import IceCream from '../components/IceCream';
+import { CartContext } from '../components/context';
+import { useContext } from 'react';
 
 export const Route = createFileRoute('/menu')({
   component: Menu,
@@ -20,6 +22,12 @@ function Menu() {
     fetchIceCreams();
   }, []);
 
+  const [cart, setCart] = useContext(CartContext);
+
+  function addToCart(iceCream) {
+    setCart([...cart, iceCream]);
+  }
+
   return (
     <div className='menu'>
       <h1>The Cream Cat Menu</h1>
@@ -36,6 +44,8 @@ function Menu() {
                 name={iceCream.name}
                 description={iceCream.description}
                 price={iceCream.price}
+                addToCart={addToCart}
+                iceCream={iceCream}
               />
             ))}
         </div>
@@ -49,10 +59,12 @@ function Menu() {
             .map((iceCream) => (
               <IceCream
                 key={iceCream.id}
-               image={`/assets/ice-creams/${iceCream.image}`}
+                image={`/assets/ice-creams/${iceCream.image}`}
                 name={iceCream.name}
                 description={iceCream.description}
                 price={iceCream.price}
+                 addToCart={addToCart}
+                iceCream={iceCream}
               />
             ))}
         </div>

@@ -1,4 +1,4 @@
-import cart from '/assets/cart.svg';
+import cartLogo from '/assets/cart.svg';
 
 export default function TodaysIceCream(props) {
   return (
@@ -19,8 +19,8 @@ export default function TodaysIceCream(props) {
           <div className='buy'>
             <p className='price'>${props.price}</p>
 
-            <button className='cart-button'>
-              <img className='cart-icon' src={cart} alt='cart' />
+            <button className='cart-button' onClick={() => props.addToCart(props.iceCream)}>
+              <img className='cart-icon' src={cartLogo} alt='cartLogo' />
             </button>
           </div>
         </div>

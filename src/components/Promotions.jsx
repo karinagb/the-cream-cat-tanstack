@@ -1,4 +1,4 @@
-import cart from '/assets/cart.svg';
+import cartLogo from '/assets/cart.svg';
 
 export default function Promotions(props) {
   const promoPrice = (props.price * 0.75).toFixed(2);
@@ -11,8 +11,8 @@ export default function Promotions(props) {
 
         <div className='promo-buy'>
           <p className='promo-price'>${promoPrice}</p>
-          <button className='cart-button'>
-            <img className='cart-icon' src={cart} alt='cart' />
+          <button className='cart-button' onClick={() => props.addToCart(props.iceCream)}>
+            <img className='cart-icon' src={cartLogo} alt='cartLogo' />
           </button>
         </div>
 

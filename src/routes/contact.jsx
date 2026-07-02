@@ -14,13 +14,18 @@ function Contact() {
     },
   });
 
+    function postContact(name, email, message) {
+    return console.log(`from ${name}, email:${email}, ${message}`)
+  }
+
+
   if (mutation.isError) {
-    return <h1>Error found!</h1>;
+    return <h3>Error found!</h3>;
   }
 
   return (
     <div className='contact'>
-      <h2>Contact Us</h2>
+      <h1>Contact Us</h1>
       <div className='location'>
         <h2>Visit us in our shop!</h2>
         <img className='shop' src={shop} alt='shop' />
@@ -32,7 +37,7 @@ function Contact() {
       {mutation.isSuccess ? (
         <h3>Submitted!</h3>
       ) : (
-        <form>
+        <form action={mutation.mutate}>
           <h2>Or send us an email</h2>
           <input type='text' name='name' placeholder='Name' />
           <input type='email' name='email' placeholder='Email' />
