@@ -8,7 +8,7 @@ import './App.css';
 const queryClient = new QueryClient();
 const router = createRouter({
   routeTree,
-  basepath: import.meta.env.BASE_URL,
+  basepath: '/the-cream-cat',
 });
 
 createRoot(document.getElementById('root')).render(
