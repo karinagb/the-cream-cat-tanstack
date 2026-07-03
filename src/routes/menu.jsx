@@ -12,7 +12,7 @@ function Menu() {
   const [iceCreams, setIceCreams] = useState([]);
 
   async function fetchIceCreams() {
-    const response = await fetch(`/api/iceCreams.json`);
+    const response = await fetch(`${import.meta.env.BASE_URL}api/iceCreams.json`);
     const data = await response.json();
 
     setIceCreams(data);
@@ -40,7 +40,7 @@ function Menu() {
             .map((iceCream) => (
               <IceCream
                 key={iceCream.id}
-                image={`/assets/ice-creams/${iceCream.image}`}
+                image={`${import.meta.env.BASE_URL}assets/ice-creams/${iceCream.image}`}
                 name={iceCream.name}
                 description={iceCream.description}
                 price={iceCream.price}
@@ -59,7 +59,7 @@ function Menu() {
             .map((iceCream) => (
               <IceCream
                 key={iceCream.id}
-                image={`/assets/ice-creams/${iceCream.image}`}
+                image={`${import.meta.env.BASE_URL}assets/ice-creams/${iceCream.image}`}
                 name={iceCream.name}
                 description={iceCream.description}
                 price={iceCream.price}

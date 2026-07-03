@@ -14,9 +14,8 @@ function Home() {
   const [iceCreams, setIceCreams] = useState([]);
   const [cart, setCart] = useContext(CartContext);
 
-
   async function fetchIceCreams() {
-    const response = await fetch('/api/iceCreams.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}api/iceCreams.json`);
     const data = await response.json();
 
     setIceCreams(data);
@@ -25,7 +24,7 @@ function Home() {
   useEffect(() => {
     fetchIceCreams();
   }, []);
-  
+
   function addToCart(iceCream) {
     setCart([...cart, iceCream]);
   }
@@ -46,7 +45,7 @@ function Home() {
         <>
           <TodaysIceCream
             key={todaysIceCream.id}
-            image={`/assets/ice-creams/${todaysIceCream.image}`}
+            image={`${import.meta.env.BASE_URL}assets/ice-creams/${todaysIceCream.image}`}
             name={todaysIceCream.name}
             description={todaysIceCream.description}
             price={todaysIceCream.price}
@@ -55,7 +54,7 @@ function Home() {
           />
           <Promotions
             key={promoIceCream.id}
-            image={`/assets/ice-creams/${promoIceCream.image}`}
+            image={`${import.meta.env.BASE_URL}assets/ice-creams/${promoIceCream.image}`}
             name={promoIceCream.name}
             price={promoIceCream.price}
             addToCart={addToCart}
