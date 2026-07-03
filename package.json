@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "postbuild": "cp dist/index.html dist/404.html",
-    "deploy": "npm run build && npm run postbuild && gh-pages -d dist"
+    "deploy": "npm run build && cp dist/index.html dist/404.html && gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.2",
