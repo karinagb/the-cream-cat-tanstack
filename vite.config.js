@@ -8,6 +8,6 @@ export default defineConfig(({ command }) => ({
     tanstackRouter(),
   ],
   base: command === 'build'
-    ? '/the-cream-cat/'
+    ? '/the-cream-cat-tanstack/'
     : '/',
 }))

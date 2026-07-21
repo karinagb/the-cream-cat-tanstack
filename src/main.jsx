@@ -8,7 +8,7 @@ import './App.css';
 const queryClient = new QueryClient();
 const router = createRouter({
   routeTree,
-  basepath: '/the-cream-cat',
+  basepath: '/the-cream-cat-tanstack',
 });
 
 createRoot(document.getElementById('root')).render(
